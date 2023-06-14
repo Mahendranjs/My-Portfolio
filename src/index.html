@@ -6,8 +6,34 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 </head>
 <body>
+
+  
   <app-root></app-root>
+      <!--========== SCROLL UP ==========-->
+
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+
+      <script type="text/javascript">
+
+          window.sr = ScrollReveal({ reset: true });
+          sr.reveal(`.home__data , .home__social`,{
+              origin: 'top',
+              distance:'60px',
+              duration:2500,
+              delay: 400
+          })
+          //   ScrollReveal().reveal(`.home__data , .home__social`, {
+          //     origin: 'top',
+          //     distance:'60px',
+          //     duration:2500,
+          //     delay: 400
+          // });
+      </script>
+      
 </body>
 </html>

@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -18,7 +19,9 @@
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
+    "@emailjs/browser": "^3.11.0",
     "rxjs": "~7.5.0",
+    "scrollreveal": "^4.0.9",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
@@ -28,6 +31,7 @@
     "@angular/compiler-cli": "~13.2.0",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
+    "@types/scrollreveal": "^0.0.8",
     "jasmine-core": "~4.0.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
