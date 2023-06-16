@@ -256,6 +256,7 @@ svg {
 
 .active-link{
   color: var(--first-color) !important;
+  border-bottom: 2px solid;
 }
 
 .nav__link {
@@ -749,6 +750,10 @@ svg {
     
     .nav__item{
         color: var(--title-color);
+    }
+
+    .nav__item:hover{
+      transform: scale(1.1);
     }
     .nav__close,
     .nav__toggle{
