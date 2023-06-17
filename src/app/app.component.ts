@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import emailjs from '@emailjs/browser';
-import * as ScrollReveal from 'scrollreveal'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -42,25 +41,14 @@ export class AppComponent implements OnInit {
         }
       })
     }
-    window.addEventListener('scroll', scrollActive)
+    window.addEventListener('scroll', scrollActive);
 
-  //   ScrollReveal().reveal(`.home__data , .home__social`, {
-  //     origin: 'top',
-  //     distance:'60px',
-  //     duration:2500,
-  //     delay: 400
-  // });
-
-    var slideUp = {
-      origin: 'top',
-      distance:'60px',
-      duration:2500,
-      delay: 400
-  };
+     const load = () => {
+          window.location.href = '#home'
+     }
+    window.addEventListener('load', load)
   }
     
-
-
   title = 'Portfolio';
 
   toggle() {
@@ -80,7 +68,6 @@ export class AppComponent implements OnInit {
     emailjs.sendForm('service_h7ecr63', 'template_fx4ms4c', e.target as HTMLFormElement, '0VQNjnhMuySmq6RuR')
       .then(() => {
         this.contactmessage = 'Message Sent Successfully';
-        console.log('SUCCESS!');
         setTimeout(() => {
           this.contactmessage = ''
         }, 5000);
@@ -93,14 +80,4 @@ export class AppComponent implements OnInit {
         }, 5000);
       });
   }
-
-  // ngAfterViewInit(){
-  //   ScrollReveal({
-  //     origin: 'top',
-  //     distance:'60px',
-  //     duration:2500,
-  //     delay: 400
-  //   }).reveal(`.home__data , ."home__social`)
-  // }
-
 }

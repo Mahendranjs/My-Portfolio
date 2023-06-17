@@ -25,12 +25,13 @@
   --first-color-alt: hsl(var(--hue), 56%, 35%);
   --title-color: hsl(228, 8%, 95%);
   --text-color: hsl(228, 8%, 65%);
-  --body-color: hsl(228, 15%, 20%);
+  // --body-color: hsl(228, 15%, 20%); <-- default 
+    --body-color:hsl(228, 30%, 25%);
+  // --body-color:linear-gradient(to right, #3a7bd5, #3a6073);
   // --container-color: hsl(220, 96%, 31%);
-  --container-color: hsl(228, 15%, 15%);
-  // --container-color: hsl(261, 43%, 45%,1);
-  // linear-gradient(45deg, #6441a5,#2a0845)
-//   hsl(224, 74, 59)
+  // --container-color: hsl(228, 15%, 15%); <-- default 
+    --container-color: linear-gradient(to right, #4b6cb7, #182848);
+    // --container-color:-webkit-linear-gradient(to right, #4b6cb7, #182848);
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Poppins", sans-serif;
@@ -87,7 +88,7 @@ body {
 }
 
 body {
-  background-color: var(--body-color);
+  background: var(--body-color);
   color: var(--text-color);
 }
 
@@ -162,7 +163,7 @@ svg {
 .header {
     position: fixed;
     width: 100%;
-    background-color: var(--container-color);
+    background: var(--container-color);
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
@@ -266,7 +267,7 @@ svg {
 /*=============== HOME ===============*/
 
 .home {
-    background-color:var(--container-color);
+    background:var(--container-color);
 }
 
 .home__container {
@@ -325,7 +326,8 @@ svg {
 .home__blob{
     width: 320px;
     // fill: var(--first-color);
-    fill: hsl(224, 15%, 25%);
+    // fill: hsl(224, 15%, 25%);
+    fill: #0d1222e0;
     filter: drop-shadow(0 12px 12px hsla(var(--hue), 100%, 70%,.2));
 }
 
@@ -375,7 +377,7 @@ svg {
 /*=============== SKILLS ===============*/
 
 .skills{
-  background-color: var(--container-color);
+  background: var(--container-color);
 }
 
 .skills__container{
@@ -426,7 +428,7 @@ svg {
 
 .services__card{
   text-align: center;
-  background-color: var(--container-color);
+  background: var(--container-color);
   padding: 3rem 1.25rem;
   border: 2px solid var(--container-color);
   transition: border .4s;
@@ -446,12 +448,13 @@ svg {
 
 .services__card:hover{
   border: 2px solid var(--first-color);
+  transform: translateY(-0.45rem);
 }
 
 /*=============== PROJECTS ===============*/
 
 .projects{
-    background-color: var(--container-color);
+    background: var(--container-color);
 }
 
 .projects__container{
@@ -539,7 +542,7 @@ svg {
 .contact__input{
   padding: 1rem 1.25rem;
   border-radius: .5rem;
-  background-color: var(--container-color);
+  background: var(--container-color);
   color: var(--title-color);
 }
 
@@ -572,7 +575,7 @@ svg {
 /*=============== FOOTER ===============*/
 
 .footer{
-  background-color: var(--container-color) ;
+  background: var(--container-color) ;
   padding-block: 3.5rem 2rem;
 }
 
@@ -642,7 +645,7 @@ svg {
 .scrollup{
   position:fixed;
   right: 1rem;
-  background-color: var(--body-color);
+  background: var(--body-color);
   padding: 6px;
   display: inline-flex;
   border-radius: .25rem;
@@ -737,7 +740,7 @@ svg {
 
 @media screen  and (min-width:1023px){
     .section{
-      padding-block: 7rem  2rem;
+      padding-block: 9rem  4rem;
     }
 
     .section__subtitle{
