@@ -65,7 +65,7 @@ export class AppComponent implements OnInit {
   sendEmail(e: Event) {
     e.preventDefault();
     let formValue = document.getElementById('contact-form') as HTMLFormElement
-    emailjs.sendForm('service_h7ecr63', 'template_fx4ms4c', e.target as HTMLFormElement, '0VQNjnhMuySmq6RuR')
+    emailjs.sendForm('service_ckzc3qz', 'template_fx4ms4c', e.target as HTMLFormElement, '0VQNjnhMuySmq6RuR')
       .then(() => {
         this.contactmessage = 'Message Sent Successfully';
         setTimeout(() => {
